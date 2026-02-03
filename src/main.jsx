@@ -15,7 +15,7 @@ const router = createBrowserRouter(
     { path: "/accountCreated", element: <AccountSetting /> },
   ],
   {
-    basename: "/PopX-Account", // 👈 THIS IS THE FIX
+    basename: "/PopX-Account",
   }
 );
 
