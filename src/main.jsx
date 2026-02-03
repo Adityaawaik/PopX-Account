@@ -7,12 +7,17 @@ import RegisteredPage from "./Components/RegisteredPage.jsx";
 import PopXLogic from "./Store/PopXLogic.jsx";
 import AccountSetting from "./Components/AccountSetting.jsx";
 
-const router = createBrowserRouter([
-  { path: "/", element: <App /> },
-  { path: "/createAccount", element: <CreateAccountPage /> },
-  { path: "/registeredAccount", element: <RegisteredPage /> },
-  { path: "/accountCreated", element: <AccountSetting /> },
-]);
+const router = createBrowserRouter(
+  [
+    { path: "/", element: <App /> },
+    { path: "/createAccount", element: <CreateAccountPage /> },
+    { path: "/registeredAccount", element: <RegisteredPage /> },
+    { path: "/accountCreated", element: <AccountSetting /> },
+  ],
+  {
+    basename: "/PopX-Account", // 👈 THIS IS THE FIX
+  }
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
