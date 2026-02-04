@@ -8,15 +8,12 @@ import RegisteredPage from "./Components/RegisteredPage.jsx";
 import AccountSetting from "./Components/AccountSetting.jsx";
 import PopXLogic from "./Store/PopXLogic.jsx";
 
-const router = createHashRouter(
-  [
-    { path: "/", element: <App /> },
-    { path: "/createAccount", element: <CreateAccountPage /> },
-    { path: "/registeredAccount", element: <RegisteredPage /> },
-    { path: "/accountCreated", element: <AccountSetting /> },
-  ],
-  { basename: "PopX-Accoun" }
-);
+const router = createHashRouter([
+  { path: "/", element: <App /> },
+  { path: "/createAccount", element: <CreateAccountPage /> },
+  { path: "/registeredAccount", element: <RegisteredPage /> },
+  { path: "/accountCreated", element: <AccountSetting /> },
+]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
